@@ -147,7 +147,7 @@ CELERY_BEAT_SCHEDULE = {
     'send-notification-on-friday-afternoon': { 
          'task': 'example.tasks.test', 
          'schedule': 20,
-        #  'args':(12)
+        #  'args':100
         },          
 }
 

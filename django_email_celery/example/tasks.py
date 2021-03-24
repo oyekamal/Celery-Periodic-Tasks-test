@@ -33,17 +33,17 @@ def setup_periodic_tasks(sender, **kwargs):
     )
 
 @app.task
-def test():
+def test(num=12):
     # print(arg)
     print('----------------------------------')
-    print("im working bro")
+    print(f"im working bro  {num}")
     
     
 #for check 
 #celery -A django_email_celery beat -l INFO
 #celery -A django_email_celery worker -B -l INFO  
-
-
+#celery -A django_email_celery worker -B -l INFO  --detach
+#celery -A proj beat -l INFO --scheduler 
 @app.task
 def print1():
     print("----------------------------------")
